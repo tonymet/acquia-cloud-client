@@ -1,0 +1,26 @@
+{
+  "name": "acquia-cloud-client",
+  "version": "0.0.1",
+  "description": "Acquia Cloud Client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonymet/acquia-cloud-client.git"
+  },
+  "keywords": [
+    "acquia",
+    "cloud",
+    "api",
+    "rest",
+    "client"
+  ],
+  "author": "Tony Metzidis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonymet/acquia-cloud-client/issues"
+  },
+  "homepage": "https://github.com/tonymet/acquia-cloud-client#readme"
+}
