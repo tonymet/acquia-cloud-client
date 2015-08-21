@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/tonymet/acquia-cloud-client/issues"
   },
-  "homepage": "https://github.com/tonymet/acquia-cloud-client#readme"
+  "homepage": "https://github.com/tonymet/acquia-cloud-client#readme",
+  "dependencies": {
+    "request": "^2.61.0"
+  }
 }
