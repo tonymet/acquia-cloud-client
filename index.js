@@ -6,7 +6,8 @@ module.exports = function(credentials){
     'cloudapi.acquia.com/v1/';
 
   this.envs = function(site,cb){
-    this._query('/sites/' + site + '/envs.json', cb);
+    console.log("envs path: " +  'sites/' + site + '/envs.json');
+    this._query('sites/' + site + '/envs.json', cb);
   };
   this._query = function(path,cb){
     request(this.endpoint + path, function(err,res,body){
