@@ -5,7 +5,7 @@ var api = new acquia(c);
 api._test('sites/prod:insomniacevents/envs.json');
 
 
-api._query('sites/prod:insomniacevents/envs.json', function(err,res){
+api.envs('insomniacevents:prod', function(err,res){
   if(err){
     console.log("ERROR: no data");
     return;

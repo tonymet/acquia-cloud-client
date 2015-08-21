@@ -1,5 +1,4 @@
 var request = require('request');
-var c = require('./creds.js');
 
 module.exports = function(credentials){
   this.credentials = credentials;
@@ -8,19 +7,6 @@ module.exports = function(credentials){
 
   this.envs = function(site,cb){
     this._query('/sites/' + site + '/envs.json', cb);
-  };
-  this._test = function(path){
-    this._query(path, function(err,res){
-      if(err){
-        console.log("ERROR: no data");
-        return;
-      }
-      console.log("response: " + JSON.stringify(res));
-    });
-  };
-  this._test2 = function(){
-    a = new this(c);
-    a._test();
   };
   this._query = function(path,cb){
     request(this.endpoint + path, function(err,res,body){
@@ -32,6 +18,15 @@ module.exports = function(credentials){
         console.log("_query res.statusCode: " + res.statusCode);
         console.log("_query body: ", JSON.stringify(body));
         cb(false, JSON.parse(body));
+    });
+  };
+  this._test = function(path){
+    this._query(path, function(err,res){
+      if(err){
+        console.log("ERROR: no data");
+        return;
+      }
+      console.log("response: " + JSON.stringify(res));
     });
   };
 };
