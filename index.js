@@ -9,6 +9,9 @@ module.exports = function(credentials){
     console.log("envs path: " +  'sites/' + site + '/envs.json');
     this._query('sites/' + site + '/envs.json', cb);
   };
+  this.servers = function(site, env, cb){
+    this._query('sites/' + site + '/envs/' + env + '/servers.json', cb);
+  };
   this._query = function(path,cb){
     request(this.endpoint + path, function(err,res,body){
         if(err || res.statusCode != 200){
