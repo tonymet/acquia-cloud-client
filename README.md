@@ -8,7 +8,7 @@ api.envs(process.env.ACQUIA_SITE, function(err,envs){
     return
   }
   for(var i = 0; i < envs.length; ++i){
-    console.log("env: " + env[i].name + ", version: " + env[i].vcs_path);
+    console.log("env: " + envs[i].name + ", version: " + envs[i].vcs_path);
   }
 });
 ```
